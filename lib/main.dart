@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:chai/order.dart';
 
 void main() => runApp(MyApp());
 
@@ -114,7 +115,14 @@ class _LoginPageState extends State<LoginPage> {
                       height: 65.0,
                       child: RaisedButton(
                         color: Colors.blueAccent,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Order(),
+                            ),
+                          );
+                        },
                         child: Text(
                           "Sign In",
                           style: TextStyle(
