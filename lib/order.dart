@@ -25,10 +25,11 @@ class _OrderState extends State<Order> {
           vertical: 10.0,
           horizontal: 30.0,
         ),
-        child: ListView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 30.0),
+              padding: EdgeInsets.symmetric(vertical: 20.0),
               child: Text(
                 "SELECT ITEM OF YOUR CHOICE: ",
                 style: TextStyle(
@@ -138,7 +139,7 @@ class _OrderState extends State<Order> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 1.0),
+              padding: EdgeInsets.symmetric(vertical: 10.0),
               child: Row(
                 children: <Widget>[
                   Expanded(
@@ -197,6 +198,22 @@ class _OrderState extends State<Order> {
                   ),
                 ],
               ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                vertical: 10.0,
+              ),
+              child: Text(
+              "MORE",
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            ListView(
+              children: <Widget>[Text("data")],
+            ),
             ),
           ],
         ),
