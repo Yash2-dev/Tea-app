@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sweetalert/sweetalert.dart';
+import 'alert_dialogs/dialog.dart';
 
 class Order extends StatefulWidget {
   @override
@@ -264,13 +266,16 @@ class _OrderState extends State<Order> {
                 width: double.infinity,
                 height: 45.0,
                 child: RawMaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    SCDialogs.specialReguestDialog(context, MediaQuery.of(context));
+                  },
                   fillColor: Colors.white,
                   child: Text(
                     "Special Requests",
                     style: TextStyle(
                       fontSize: 16.0,
                     ),
+                    
                   ),
                 ),
               ),
